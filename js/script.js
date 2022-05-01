@@ -10,7 +10,7 @@ for (let i = 0; i <= numero2; i++) {
 
 let item = prompt("Ingrese el item a agregar en la lista. (para finalizar tipear LISTO)");
 
-while (item != "LISTO"){
+while (item != "LISTO") {
     console.log(item + " Agregado.");
-    item=prompt("Ingrese el item a agregar en la lista. (para finalizar tipear LISTO)");
+    item = prompt("Ingrese el item a agregar en la lista. (para finalizar tipear LISTO)");
 }
