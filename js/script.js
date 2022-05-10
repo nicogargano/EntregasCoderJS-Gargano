@@ -1,16 +1,49 @@
-//EJEMPLO FOR
+function bienvenida() {
 
-let numero1 = parseInt(prompt("Ingrese el numero entero a multiplicar sucesivamente."));
-let numero2 = parseInt(prompt("Ingrese el numero de veces que quiere que se multiplique."));
-for (let i = 0; i <= numero2; i++) {
-    console.log(numero1 + " x " + i + " = " + (numero1 * i));
+    let nombre = prompt(
+        "Bienvenido al Gimnasio de Powerlifting!\nIngrese su nombre:"
+    );
+
+    while (nombre === "") {
+        nombre = prompt("Bienvenido al Gimnasio de Powerlifting!\nIngrese su nombre:");
+    }
+    return nombre;
 }
 
-//EJEMPLO WHILE
+function elegirMembresia() {
 
-let item = prompt("Ingrese el item a agregar en la lista. (para finalizar tipear LISTO)");
+    let producto = prompt("Que Membresia le interesa?\n1)Semanal.\n2)Mensual.\n3)Anual.");
 
-while (item != "LISTO") {
-    console.log(item + " Agregado.");
-    item = prompt("Ingrese el item a agregar en la lista. (para finalizar tipear LISTO)");
+    while (producto !== "1" && producto !== "2" && producto !== "3" && producto !== "Semanal" && producto !== "Mensual" && producto !== "Anual" && producto !== "semanal" && producto !== "mensual" && producto !== "anual") {
+        producto = prompt("Que Membresia le interesa?\n1)Semanal.\n2)Mensual.\n3)Anual.");
+    }
+
+    if (producto === "1" || producto === "Semanal" || producto === "semanal") {
+        return "Semanal";
+    } else if (producto === "2" || producto === "Mensual" || producto === "mensual") {
+        return "Mensual";
+    } else {
+        return "Anual";
+    }
 }
+
+function pagarMembresia(cliente, producto) {
+
+    switch (producto) {
+        case "Semanal":
+            alert("El valor a abonar es de $ 1000.\nSelecciono: " + producto + ".");
+            break;
+        case "Mensual":
+            alert("El valor a abonar es de $ 3500.\nDe regalo primer semana de personalizado!\nSelecciono: " + producto + ".");
+            break;
+        case "Anual":
+            alert("El valor a abonar es de $ 30000.\nDe regalo un mes a elegir de personalizado!\nSelecciono: " + producto + ".");
+            break;
+    }
+
+    alert("Muchas Gracias por elegirnos " + cliente + "!");
+}
+
+let nombreCliente = bienvenida();
+let productoElejido = elegirMembresia();
+pagarMembresia(nombreCliente, productoElejido);
