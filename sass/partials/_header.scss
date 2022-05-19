@@ -1,0 +1,31 @@
+/* NAVEGACION */
+
+header {
+    background-color: map-get($colours, secondary);
+    border-bottom: 2px solid gray;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: space-around;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: map-get($colours, principal);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: map-get($colours, principal);
+    font-size: 2rem;
+}
+
+.dropdown-item {
+    color: map-get($colours, principal);
+    font-size: 1.5rem;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: map-get($colours, principal);
+    font-size: 1, 5rem;
+}

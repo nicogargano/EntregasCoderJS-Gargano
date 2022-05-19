@@ -1,0 +1,41 @@
+/* CONTACTO */
+
+.contactoTitulo {
+    font-size: 15rem;
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    border: 2px solid gray;
+    padding: 5px;
+}
+
+.btn-primary {
+    color: map-get($colours, secondary);
+    background-color: map-get($colours, tertiary);
+    border-color: map-get($colours, tertiary);
+    width: 200px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    color: map-get($colours, secondary);
+    background-color: map-get($colours, tertiary);
+    border-color: map-get($colours, tertiary);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .contactoTitulo {
+        font-size: 10rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contactoTitulo {
+        font-size: 5rem;
+    }
+}

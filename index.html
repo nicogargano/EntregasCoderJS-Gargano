@@ -1,16 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrega 2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="assets/img/favicon-32x32.png">
+	<meta name="keywords"
+		content="GIMNASIO, POWERLIFTING, PERSONAL TRAINER, PROFESIONALES, PESAS, ENTRENAR, CROSSFIT, GYM, FITNESS">
+	<meta name="description"
+		content="Gimnasio de Powerlifting que cuenta con profesionales que brindan trabajo personalizado dependiendo del objetivo de cada cliente.">
+	<title>Home | Gimnasio de Powerlifting</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Simulador interactivo</h1>
-    <script type="text/javascript" src="./js/script.js"></script>
+	<div class="container">
+		<!-- HEADER -->
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="index.html">
+						<img src="public/img/logo.webp" alt="logo" width="200" height="150">
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#nosotros">Nosotros</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#servicios" id="navbarDropdownMenuLink"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Servicios
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<li><a class="dropdown-item" href="#membresias">Membresias</a></li>
+									<li><a class="dropdown-item" href="#personalizados">Personalizados</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="pages/galeria.html">Galeria</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="pages/faq.html">FAQ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="pages/Entrega3Gargano.html">Entrega3Gargano</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- FIN DEL HEADER -->
+		<!-- MAIN -->
+		<main>
+			<section>
+				<article class="home">
+					<h1 data-aos="fade-down">NO HAY PROGRESO SIN ESFUERZO</h1>
+				</article>
+			</section>
+
+			<section>
+				<article id="nosotros">
+					<h2 class="titulo1" data-aos="fade-down">Sobre nosotros</h2>
+					<p class="parrafo1" data-aos="fade-right">Somos un gimnasio orientado a la especialidad de
+						POWERLIFTING. Lo que se busca es lograr que el cliente tenga bien desarrollada la fuerza y
+						técnica de los ejercicios multiarticulares pilares de la especialidad: SENTADILLA / PESO MUERTO
+						/ PECHO PLANO.</p>
+					<picture>
+						<img class="imagen1" data-aos="fade-right" src="public/img/logo.webp" alt="logo" width="400"
+							height="300">
+					</picture>
+				</article>
+			</section>
+
+			<section>
+				<article id="servicios">
+					<h2 id="membresias" data-aos="fade-down">Membresias que ofrecemos</h2>
+					<div class="tablaMembresias" data-aos="fade-up">
+						<p class="m1">Membresias</p>
+						<p class="i1">Incluye</p>
+						<p class="v1">Valor</p>
+						<p class="m2">Semanal</p>
+						<p class="m3">Mensual</p>
+						<p class="m4">Anual</p>
+						<p class="i2">Duracion una semana</p>
+						<p class="i3">Duracion un mes y de regalo primer semana de personalizado</p>
+						<p class="i4">Duracion un año y de regalo un mes a elegir de personalizado</p>
+						<p class="v2">$1000</p>
+						<p class="v3">$3500</p>
+						<p class="v4">$30000</p>
+					</div>
+					<div id="serviciosPersonalizados" data-aos="fade-down">
+						<h2 id="personalizados">Trabajos personalizados</h2>
+						<ol class="lista1" data-aos="fade-up">
+							<li>Semanal $800</li>
+							<li>Mensual $2000</li>
+							<li>Anual $20000</li>
+						</ol>
+						<p class="parrafo2" data-aos="fade-right">A pesar de ser un gimnasio especializado en
+							POWERLIFTING, nuestro personal capacitado puede enfrentar cualquier tipo de desafio
+							que proponga el cliente. Adquiriendo nuestros trabajos personalizados, un profesor te va a
+							guiar hacia tu meta!</p>
+						<picture>
+							<img class="imagen2" data-aos="fade-right" src="public/img/logo.webp" alt="logo" width="400"
+								height="300">
+						</picture>
+					</div>
+				</article>
+			</section>
+		</main>
+		<!-- FIN DEL MAIN -->
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer">
+				<div id="horario">
+					<ul>
+						<li>Horarios de atencion</li>
+						<li>Lunes a Virnes de 8 a 23 hs</li>
+						<li>Sabados de 9 a 19 hs</li>
+					</ul>
+				</div>
+				<div id="mail">
+					<ul>
+						<li>Mail de contacto directo:</li>
+						<li>gimnasio@gmail.com</li>
+					</ul>
+				</div>
+				<div id="servicios">
+					<a href="#servicios">Servicios</a>
+				</div>
+				<div id="ig">
+					<a href="https://www.instagram.com"><img src="public/img/ig.png" alt="ig"></a>
+				</div>
+				<div id="fb">
+					<a href="https://www.fb.com"><img src="public/img/fb.png" alt="fb"></a>
+				</div>
+				<div id="tw">
+					<a href="https://www.twitter.com"><img src="public/img/tw.png" alt="tw"></a>
+				</div>
+				<div id="wpp">
+					<a href="https://www.whatsapp.com"><img src="public/img/wpp.png" alt="wpp"></a>
+				</div>
+			</div>
+		</footer>
+		<!-- FIN DEL FOOTER -->
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+	</script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+	<script type="text/javascript" src="../entregascoderjs-gargano/js/scriptalert.js"></script>
 </body>
 
 </html>

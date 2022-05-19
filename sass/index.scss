@@ -1,0 +1,27 @@
+/* IMPORTS */
+
+/* FONT */
+
+@font-face {
+    font-family: 'Smooch Sans', sans-serif;
+    src: url('../public/font/SmoochSans-VariableFont_wght.ttf');
+}
+
+/* MISCELANEOUS */
+
+@import './misc/normalize';
+@import './misc/variables';
+@import './misc/mixins';
+@import './misc/animations';
+
+/* PARTIALS */
+
+@import './partials/header';
+@import './partials/footer';
+
+/* VIEWS */
+
+@import './views/home';
+@import './views/galeria';
+@import './views/faq';
+@import './views/contacto';

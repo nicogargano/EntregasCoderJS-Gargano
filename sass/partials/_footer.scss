@@ -1,0 +1,67 @@
+/* FOOTER */
+
+.footer {
+    display: grid;
+    grid-template-areas:
+        "horario servicios servicios servicios servicios"
+        "mail ig fb tw wpp";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 1fr 1fr 1fr 1fr;
+    background-color: map-get($colours, secondary);
+    color: map-get($colours, principal);
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+    min-height: 30vh;
+    border-top: 2px solid gray;
+    
+    #horario {
+        grid-area: horario;
+    }
+    
+    #mail {
+        grid-area: mail;
+    }
+    
+    #servicios {
+        grid-column: servicios;
+        
+        a {
+            color: map-get($colours, principal);
+        }
+    }
+    
+    #ig {
+        grid-area: ig;
+    }
+    
+    #fb {
+        grid-area: fb;
+    }
+    
+    #tw {
+        grid-area: tw;
+    }
+    
+    #wpp {
+        grid-area: wpp;
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .footer {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer {
+        font-size: 0.75rem;
+
+        img {
+                height: 30px;
+            }
+    }
+}

@@ -1,0 +1,42 @@
+/* FAQ */
+
+#faq {
+    h2 {
+        font-size: 10rem;
+        text-align: center;
+        padding: 20px;
+    }
+
+    p {
+        font-size: 3.2rem;
+        text-align: center;
+        padding: 40px;
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    #faq {
+        h2 {
+            font-size: 6rem;
+        }
+    
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #faq {
+        h2 {
+            font-size: 3rem;
+            padding: 6px;
+        }
+    
+        p {
+            font-size: 1rem;
+        }
+    }
+}
