@@ -65,69 +65,74 @@ h1 {
         padding: 75px 10px;
     }
 
+    #tMembresias {
+        margin: 0 auto;    
+    }
+
+    th, td {
+        padding: 30px;
+        font-size: 3rem;
+    }
+
     .tablaMembresias {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-areas:
-            "m1 i1 v1"
-            "m2 i2 v2"
-            "m3 i3 v3"
-            "m4 i4 v4";
-        align-items: center;
-        text-align: center;
-        font-size: 3.2rem;
-        @include border;
+        grid-template-columns: auto;
+        grid-template-rows: auto 50px auto 100px auto;
 
-        .m1 {
-            grid-area: m1;
-            color: map-get($colours, tertiary);
+        #tMembresias{
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
         }
         
-        .m2 {
-            grid-area: m2;
+        #b1 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 4;
+            grid-row-end: 5;
         }
         
-        .m3 {
-            grid-area: m3;
+        #b2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 5;
         }
         
-        .m4 {
-            grid-area: m4;
+        #b3 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
         }
         
-        .i1 {
-            grid-area: i1;
-            color: map-get($colours, tertiary);
+        #b4 {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
         }
-        
-        .i2 {
-            grid-area: i2;
+
+        #bMembresia{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
         }
-        
-        .i3 {
-            grid-area: i3;
+
+        #b5 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
         }
-        
-        .i4 {
-            grid-area: i4;
-        }
-        
-        .v1 {
-            grid-area: v1;
-            color: map-get($colours, tertiary);
-        }
-        
-        .v2 {
-            grid-area: v2;
-        }
-        
-        .v3 {
-            grid-area: v3;
-        }
-        
-        .v4 {
-            grid-area: v4;
+
+        #busqueda {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
         }
     }
     

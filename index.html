@@ -56,7 +56,7 @@
 								<a class="nav-link" href="pages/faq.html">FAQ</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="pages/Entrega3Gargano.html">Entrega3Gargano</a>
+								<a class="nav-link" href="pages/contacto.html">Contacto</a>
 							</li>
 						</ul>
 					</div>
@@ -89,19 +89,26 @@
 			<section>
 				<article id="servicios">
 					<h2 id="membresias" data-aos="fade-down">Membresias que ofrecemos</h2>
-					<div class="tablaMembresias" data-aos="fade-up">
-						<p class="m1">Membresias</p>
-						<p class="i1">Incluye</p>
-						<p class="v1">Valor</p>
-						<p class="m2">Semanal</p>
-						<p class="m3">Mensual</p>
-						<p class="m4">Anual</p>
-						<p class="i2">Duracion una semana</p>
-						<p class="i3">Duracion un mes y de regalo primer semana de personalizado</p>
-						<p class="i4">Duracion un año y de regalo un mes a elegir de personalizado</p>
-						<p class="v2">$1000</p>
-						<p class="v3">$3500</p>
-						<p class="v4">$30000</p>
+					<div class="tablaMembresias">
+						<table id="tMembresias" width="100%" border="1" data-aos="fade-up">
+							<tr>
+								<th>Membresias</th>
+								<th>Incluye</th>
+								<th>Valor</th>
+								<th>Cupos</th>
+							</tr>
+						</table>
+						<button id="b1" type="button">Pocos Cupos</button>
+						<button id="b2" type="button">Sin Cupos</button>
+						<button id="b3" type="button">Ordenar por Cupos</button>
+						<button id="b4" type="button">Ordenar por Valor</button>
+						<input type="text" id="bMembresia">
+						<input id="b5" type="button" value="Buscar Membresia Deseada">
+						<div id="busqueda"></div>
+						<div id="data5"></div>
+						<div id="data0"></div>
+						<div id="oCupo"></div>
+						<div id="oPrecio"></div>
 					</div>
 					<div id="serviciosPersonalizados" data-aos="fade-down">
 						<h2 id="personalizados">Trabajos personalizados</h2>
@@ -165,7 +172,7 @@
 	<script>
 		AOS.init();
 	</script>
-	<script type="text/javascript" src="../entregascoderjs-gargano/js/scriptalert.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
 </body>
 
 </html>
