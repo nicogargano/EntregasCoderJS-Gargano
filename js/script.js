@@ -36,7 +36,7 @@ btnE.addEventListener("click", (e) => {
         cupo.value = ""
         p.innerText = "Guardado con exito!"
     }
-    return mem;
+    return membresia;
 });
 
 
