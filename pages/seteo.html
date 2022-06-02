@@ -38,40 +38,29 @@
 				<form class="row g-3 needs-validation" novalidate>
 					<div class="col-md-4">
 						<label for="validationCustom01" class="form-label">TIPO:</label>
-						<input type="text" class="form-control" id="validationCustom01" placeholder="TIPO"
+						<input type="text" class="form-control" id="tipo" placeholder="TIPO"
 							required>
-						<div class="valid-feedback">
-							Bien!
-						</div>
 					</div>
 					<div class="col-md-4">
 						<label for="validationCustom02" class="form-label">PRECIO:</label>
-						<input type="number" class="form-control" id="validationCustom02" placeholder="PRECIO" required>
-						<div class="valid-feedback">
-							Bien!
-						</div>
+						<input type="number" class="form-control" id="precio" placeholder="PRECIO" required>
 					</div>
                     <div class="col-md-4">
 						<label for="validationCustom03" class="form-label">CUPOS:</label>
-						<input type="number" class="form-control" id="validationCustom03" placeholder="CUPOS" required>
-						<div class="valid-feedback">
-							Bien!
-						</div>
+						<input type="number" class="form-control" id="cupos" placeholder="CUPOS" required>
 					</div>
 					<div class="mb-3">
 						<label for="validationTextarea" class="form-label">DETALLE:</label>
-						<textarea class="input-group has-validation" id="validationTextarea" placeholder="Descripcion."
+						<textarea class="input-group has-validation" id="detalle" placeholder="Descripcion."
 							required></textarea>
-						<div class="valid-feedback">
-							Bien!
-						</div>
 					</div>
 					<div class="col-md-6" id="enviar">
-						<button class="btn btn-primary" id=bEnviar type="submit">Enviar!</button>
+						<input class="btn btn-primary" id=bEnviar type="button" value="Enviar!"></input>
 					</div>
                     <div class="col-md-6" id="fin">
-						<button class="btn btn-primary" id=bFin type="submit">FIN</button>
+						<input class="btn btn-primary" id=bFin type="button" value="FIN"></input>
 					</div>
+					<div><p id="p"></p></div>
 				</form>
 			</section>
 		</main>
@@ -93,6 +82,7 @@
 	<script>
 		AOS.init();
 	</script>
+	<script type="text/javascript" src="../js/script.js"></script>
 </body>
 
 </html>
