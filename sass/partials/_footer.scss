@@ -1,5 +1,11 @@
 /* FOOTER */
 
+.footerSeteo {
+    display: flex;
+    justify-content: end;
+    border-top: 2px solid gray;
+}
+
 .footer {
     display: grid;
     grid-template-areas:

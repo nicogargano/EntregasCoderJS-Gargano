@@ -1,0 +1,31 @@
+/* SETEO */
+
+.seteoTitulo {
+    font-size: 10rem;
+    text-align: center;
+    padding: 20px;
+}
+
+#fin {
+    display: flex;
+    justify-content: center;
+}
+
+#enviar {
+    display: flex;
+    justify-content: center;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .contactoTitulo {
+        font-size: 10rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contactoTitulo {
+        font-size: 5rem;
+    }
+}
