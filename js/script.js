@@ -1,87 +1,14 @@
 //SETEO DE MEMBRESIAS
 
-const boton6 = document.getElementById("b6");
+let boton6 = document.getElementById("b6");
+console.log(boton6);
 boton6.onclick = () => {
     window.location.href = "./pages/seteo.html";
 }
 
-let btnF = document.getElementById("bFin");
-btnF.onclick = () => {
-    window.location.href = "../index.html";
-}
+let arrayMembresias = JSON.parse(localStorage.getItem("item"));
 
-let btnE = document.getElementById("bEnviar");
-let tipo = document.getElementById("tipo");
-let precio = document.getElementById("precio");
-let cupo = document.getElementById("cupos");
-let detalle = document.getElementById("detalle");
-p = document.querySelector("p")
-const arrayMembresias = [];
-
-btnE.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    let membresia = {
-        tipoM: tipo.value,
-        precioM: precio.value,
-        detalleM: detalle.value,
-        cupoM: cupo.value
-    }
-
-    if (membresia.tipoM == "" || membresia.precioM == "" || membresia.detalle == "" || membresia.cupoM == "") {
-        p.innerText = "Campos vacios!";
-        return;
-    } else {
-        arrayMembresias.push(membresia);
-        localStorage.setItem("item", JSON.stringify(arrayMembresias));
-        tipo.value = ""
-        precio.value = ""
-        detalle.value = ""
-        cupo.value = ""
-        p.innerText = "Guardado con exito!"
-    }
-    return membresia;
-});
-
-
-
-//BUSCAR UNA MEMBRESIA POR TIPO
-
-const btnBuscar = document.querySelector("#b5");
-btnBuscar.addEventListener("click", () => {
-
-    let busqueda = document.getElementById("busqueda");
-    let listaBusqueda = document.createElement("div");
-
-    let membIngresada = arrayMembresias.filter(membresia => membresia.tipo.includes(bMembresia.value));
-    console.log(membIngresada);
-
-    busqueda.innerHTML = "<h2> Lista de Membresias que corresponen a tu busqueda: </h2>"
-
-    membIngresada.forEach(p => {
-        let h3 = document.createElement("h3");
-        let li = document.createElement("li");
-
-        h3.innerText = p.tipo;
-
-        li = document.createElement("li");
-        li.innerText = p.detalle;
-        h3.appendChild(li);
-
-        li = document.createElement("li");
-        li.innerText = p.precio;
-        h3.appendChild(li);
-
-        li = document.createElement("li");
-        li.innerText = p.cupo;
-        h3.appendChild(li);
-
-        listaBusqueda.appendChild(h3)
-    });
-
-    busqueda.appendChild(listaBusqueda);
-
-});
+console.log(JSON.parse(localStorage.getItem("item")));
 
 // MEMBRESIAS
 
@@ -271,4 +198,43 @@ boton4.onclick = () => {
     oPrecio.appendChild(listaPrecio);
 
 }
+
+//BUSCAR UNA MEMBRESIA POR TIPO
+
+const btnBuscar = document.querySelector("#b5");
+btnBuscar.addEventListener("click", () => {
+
+    let busqueda = document.getElementById("busqueda");
+    let listaBusqueda = document.createElement("div");
+
+    let membIngresada = arrayMembresias.filter(membresia => membresia.tipo.includes(bMembresia.value));
+    console.log(membIngresada);
+
+    busqueda.innerHTML = "<h2> Lista de Membresias que corresponen a tu busqueda: </h2>"
+
+    membIngresada.forEach(p => {
+        let h3 = document.createElement("h3");
+        let li = document.createElement("li");
+
+        h3.innerText = p.tipo;
+
+        li = document.createElement("li");
+        li.innerText = p.detalle;
+        h3.appendChild(li);
+
+        li = document.createElement("li");
+        li.innerText = p.precio;
+        h3.appendChild(li);
+
+        li = document.createElement("li");
+        li.innerText = p.cupo;
+        h3.appendChild(li);
+
+        listaBusqueda.appendChild(h3)
+    });
+
+    busqueda.appendChild(listaBusqueda);
+
+});
+
 
