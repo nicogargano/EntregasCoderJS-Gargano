@@ -25,6 +25,15 @@ btnE.addEventListener("click", (e) => {
 
     if (membresia.tipo == "" || membresia.preciM == "" || membresia.detalle == "" || membresia.cupo == "") {
         p.innerText = "Campos vacios!";
+        Toastify({
+            text: "Campos vacios!",
+            duration: 3000,
+            gravity: "bottom",
+            position: "center",
+            style: {
+                background: "linear-gradient(to right, #b80202, #c9523d)",
+            },
+        }).showToast();
         return;
     } else {
         array.push(membresia);
@@ -34,6 +43,17 @@ btnE.addEventListener("click", (e) => {
         detalle.value = ""
         cupo.value = ""
         p.innerText = "Guardado con exito!"
+        Toastify({
+
+            text: "Guardado con exito!",
+
+            duration: 3000,
+            gravity: "bottom",
+            position: "center",
+            style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+        }).showToast();
     }
     return membresia;
 });

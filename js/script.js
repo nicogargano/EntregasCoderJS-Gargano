@@ -1,7 +1,6 @@
 //SETEO DE MEMBRESIAS
 
 let boton6 = document.getElementById("b6");
-console.log(boton6);
 boton6.onclick = () => {
     window.location.href = "./pages/seteo.html";
 }
