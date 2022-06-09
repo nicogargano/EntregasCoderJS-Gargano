@@ -5,7 +5,7 @@ boton6.onclick = () => {
     window.location.href = "./pages/seteo.html";
 }
 
-let arrayMembresias = JSON.parse(localStorage.getItem("item"));
+let arrayMembresias = JSON.parse(localStorage.getItem("item")) || [];
 
 console.log(JSON.parse(localStorage.getItem("item")));
 
