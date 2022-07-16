@@ -156,52 +156,57 @@ h1 {
 #servicios .tablaMembresias {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 50px auto 50px auto 100px auto; }
-  #servicios .tablaMembresias #tMembresias {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3; }
-  #servicios .tablaMembresias #b1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 6; }
-  #servicios .tablaMembresias #b2 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 6; }
-  #servicios .tablaMembresias #b3 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 6; }
-  #servicios .tablaMembresias #b4 {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 6; }
-  #servicios .tablaMembresias #bMembresia {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4; }
-  #servicios .tablaMembresias #b5 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 4; }
+  grid-template-rows: 50px 50px auto 50px auto 100px auto; }
   #servicios .tablaMembresias #b6 {
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2; }
-  #servicios .tablaMembresias #busqueda {
+  #servicios .tablaMembresias #b7 {
     grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3; }
+  #servicios .tablaMembresias #tMembresias {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4; }
+  #servicios .tablaMembresias #bMembresia {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5; }
+  #servicios .tablaMembresias #b5 {
+    grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 4;
     grid-row-end: 5; }
+  #servicios .tablaMembresias #busqueda {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6; }
+  #servicios .tablaMembresias #b1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7; }
+  #servicios .tablaMembresias #b2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7; }
+  #servicios .tablaMembresias #b3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7; }
+  #servicios .tablaMembresias #b4 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 7; }
 
 #servicios #serviciosPersonalizados {
   display: grid;

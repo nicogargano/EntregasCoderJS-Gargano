@@ -1,0 +1,20 @@
+[
+    {
+        "tipo": "Semanal",
+        "precio": "1500",
+        "detalle": "Membresia Semanal",
+        "cupo": "10"
+    },
+    {
+        "tipo": "Mensual",
+        "precio": "3500",
+        "detalle": "Membresia Mensual",
+        "cupo": "0"
+    },
+    {
+        "tipo": "Anual",
+        "precio": "30000",
+        "detalle": "Membresia Anual",
+        "cupo": "4"
+    }
+]

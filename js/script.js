@@ -5,9 +5,13 @@ boton6.onclick = () => {
     window.location.href = "./pages/seteo.html";
 }
 
-let arrayMembresias = JSON.parse(localStorage.getItem("item"));
+let arrayMembresias = JSON.parse(localStorage.getItem("item")) || [];
 
 console.log(JSON.parse(localStorage.getItem("item")));
+
+let arrayMembresiasPreSet = JSON.parse(localStorage.getItem("item2")) || [];
+
+console.log(JSON.parse(localStorage.getItem("item2")));
 
 // MEMBRESIAS
 
@@ -36,17 +40,64 @@ arrayMembresias.forEach(p => {
     cuerpoTabla.appendChild(fila)
 });
 
-tabla.appendChild(cuerpoTabla);
+    tabla.appendChild(cuerpoTabla);
+
+//Membresias fetch
+
+let btnCJ = document.getElementById("b7");
+
+btnCJ.addEventListener("click", (e) => {
+    e.preventDefault();
+    fetch('./js/membresias.json')
+    .then ((res) => res.json())
+    .then ((data) => localStorage.setItem("item2", JSON.stringify(data)))
+    window.location.reload()
+});
+
+if (localStorage.getItem("item2")!=null) {
+    fetch('./js/membresias.json')
+    .then((res) => res.json())
+    .then((arrayMembresiasPreSet) => {
+        arrayMembresiasPreSet.forEach(p => {
+            let fila = document.createElement("tr");
+            let td = document.createElement("td");
+
+            td.innerText = p.tipo;
+            fila.appendChild(td);
+
+            td = document.createElement("td");
+            td.innerText = p.detalle;
+            fila.appendChild(td);
+
+            td = document.createElement("td");
+            td.innerText = p.precio;
+            fila.appendChild(td);
+
+            td = document.createElement("td");
+            td.innerText = p.cupo;
+            fila.appendChild(td);
+
+            cuerpoTabla.appendChild(fila)
+        });
+
+        tabla.appendChild(cuerpoTabla);
+        console.log(arrayMembresiasPreSet)
+    }
+    )
+}
+
 
 // SI TENGO MENOS DE 5 CUPOS EN ALGUNA MEMBRESIA
 
+const arrayTodo = arrayMembresias.concat(arrayMembresiasPreSet);
+
 let boton1 = document.getElementById("b1");
 boton1.onclick = () => {
-
+    
     let data5 = document.getElementById("data5");
     let listaData5 = document.createElement("div")
 
-    let pocosCupos = arrayMembresias.filter(membresia => membresia.cupo <= 5);
+    let pocosCupos = arrayTodo.filter(membresia => membresia.cupo <= 5);
     console.log(("Membresias con pocos cupos, reorganizar!"));
     console.log(pocosCupos);
     data5.innerHTML = "<h2> Las siguientes Membresias tienen menos de 5 cupos: </h2>";
@@ -84,7 +135,7 @@ boton2.onclick = () => {
     let data0 = document.getElementById("data0");
     let listaData0 = document.createElement("div");
 
-    let noCupo = arrayMembresias.filter(membresia => membresia.cupo == 0);
+    let noCupo = arrayTodo.filter(membresia => membresia.cupo == 0);
     console.log(("Hay membresias sin cupos, reorganizar ya!"));
     console.log(noCupo);
     data0.innerHTML = "<h2> Las siguientes Membresias no tiene cupo: </h2>";
@@ -123,7 +174,7 @@ boton3.onclick = () => {
     let listaCupo = document.createElement("div");
 
     let ordenaCupos = [];
-    ordenaCupos = arrayMembresias.map(elemento => elemento);
+    ordenaCupos = arrayTodo.map(elemento => elemento);
     ordenaCupos.sort(function (a, b) {
         return a.cupo - b.cupo;
     });
@@ -165,7 +216,7 @@ boton4.onclick = () => {
     let listaPrecio = document.createElement("div");
 
     let ordenaPrecio = [];
-    ordenaPrecio = arrayMembresias.map(elemento => elemento);
+    ordenaPrecio = arrayTodo.map(elemento => elemento);
     ordenaPrecio.sort(function (a, b) {
         return a.precio - b.precio;
     });
@@ -206,7 +257,7 @@ btnBuscar.addEventListener("click", () => {
     let busqueda = document.getElementById("busqueda");
     let listaBusqueda = document.createElement("div");
 
-    let membIngresada = arrayMembresias.filter(membresia => membresia.tipo.includes(bMembresia.value));
+    let membIngresada = arrayTodo.filter(membresia => membresia.tipo.includes(bMembresia.value));
     console.log(membIngresada);
 
     busqueda.innerHTML = "<h2> Lista de Membresias que corresponen a tu busqueda: </h2>"
